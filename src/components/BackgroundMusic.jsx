@@ -58,7 +58,7 @@ export default function BackgroundMusic() {
 
   return (
     <>
-      <audio ref={audioRef} src="/music/urban-atmosphere-corporate-ambient.mp3" loop preload="auto" />
+      <audio ref={audioRef} src="music/urban-atmosphere-corporate-ambient.mp3" loop preload="auto" />
       <button onClick={toggleMusic} className="musicBtn" aria-label="Toggle music">
         {isPlaying ? <VolumeIcon /> : <MuteIcon />}
       </button>

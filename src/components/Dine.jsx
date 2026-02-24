@@ -9,7 +9,7 @@ export default function Dine() {
     <section className="section" id="dine">
       <div className="container">
         <div className="headlineCenter reveal" style={{ maxWidth: 900 }}>
-          <h2>Dine Innnnn</h2>
+          <h2>Dine In</h2>
           <p style={{ marginTop: 10 }}>From poolside brunch to golden hour sips..</p>
         </div>
 
