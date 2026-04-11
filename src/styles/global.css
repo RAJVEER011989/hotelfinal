@@ -4885,3 +4885,21 @@ html {
     padding: 8px 2px !important;
   }
 }
+/* default → desktop */
+.tagline-mobile {
+  display: none;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .tagline-desktop {
+    display: none;
+  }
+
+  .tagline-mobile {
+    display: block;
+    width: 92vw;
+    max-width: 92vw;
+    margin: 0 auto;
+  }
+}

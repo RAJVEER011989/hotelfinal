@@ -1,6 +1,7 @@
 import { useState } from "react";
 import footerLogo from "../assets/logo/TM (2).png";
-import footerTagline from "../assets/logo/tag (4).png";
+import footerTagline from "../assets/logo/tag (2).png";
+import footerTaglineMobile from "../assets/logo/tag (4).png";
 import { ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -15,7 +16,8 @@ export default function Footer() {
     <footer className="footerLuxury">
       <div className="container footerLuxuryInner">
         <div className="footerTaglineImg">
-          <img src={footerTagline} alt="Celebrate Every Occasion" />
+          <img src={footerTagline} class="tagline-desktop" alt="Celebrate Every Occasion" />
+          <img src={footerTaglineMobile} class="tagline-mobile" alt="Celebrate Every Occasion" />
         </div>
 
         {/* Desktop footer */}
