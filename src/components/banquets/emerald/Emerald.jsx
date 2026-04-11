@@ -64,7 +64,6 @@ export default function Emerald() {
 <BanquetNavigator current="emerald" />
 <BanquetFaqs />
 <Footer />
-      <Footer />
     </>
   );
 }
