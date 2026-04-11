@@ -3967,4 +3967,413 @@ html {
 .success-button:hover {
   background: rgba(184, 155, 94, 0.1);
 }
+/* =========================
+   MOBILE RESPONSIVE FIXES
+========================= */
+@media (max-width: 768px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
 
+  .container {
+    width: min(100%, calc(100% - 28px));
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    min-height: 88svh;
+  }
+
+  .heroCenter,
+  .heroTextWrap {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .heroTextWrap {
+    margin-top: 20px;
+    max-width: 92%;
+  }
+
+  .heroBrand,
+  .heroLogoImage,
+  .hero-logo-image {
+    width: min(86vw, 420px);
+    max-width: 86vw;
+    margin: 0 auto;
+  }
+
+  .heroTagline {
+    font-size: clamp(24px, 6vw, 34px);
+    line-height: 1.15;
+    margin-top: 8px;
+  }
+
+  .heroDesc,
+  .hero-description,
+  .hero-description-small {
+    max-width: 92%;
+    font-size: 15px;
+    line-height: 1.65;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .topRow,
+  .headerOverlay .topRow {
+    width: min(100%, calc(100% - 24px));
+    padding-top: 12px;
+  }
+
+  .mainLogo,
+  .innerHeaderLogo img {
+    height: 44px;
+  }
+
+  /* ===== FLOATING ACTIONS ===== */
+  .right-floating-bar,
+  .floatingPills,
+  .verticalActions {
+    right: 8px !important;
+    gap: 10px !important;
+  }
+
+  .enquiry-vertical-button,
+  .room-booking-vertical-button,
+  .floatingPill,
+  .floatingActionBtn {
+    width: 52px !important;
+    min-width: 52px !important;
+    height: 138px !important;
+    border-radius: 26px !important;
+    font-size: 10px !important;
+    letter-spacing: 0.24em !important;
+    padding: 10px 0 !important;
+    opacity: 0.9;
+  }
+
+  .sound-button,
+  .whatsapp-button,
+  .call-button-pill,
+  .floatingSoundBtn,
+  .floatingWhatsappBtn {
+    bottom: 18px !important;
+  }
+
+  .sound-button,
+  .floatingSoundBtn {
+    left: 14px !important;
+    width: 58px !important;
+    height: 58px !important;
+  }
+
+  .whatsapp-button,
+  .floatingWhatsappBtn {
+    right: 14px !important;
+    width: 58px !important;
+    height: 58px !important;
+  }
+
+  .call-button-pill {
+    display: none !important;
+  }
+
+  /* ===== HOME SECTIONS GENERAL ===== */
+  section {
+    overflow: hidden;
+  }
+
+  .sectionTitle,
+  .homeSectionTitle,
+  .galleryHomeIntro h2,
+  .staysIntro h2,
+  .facilitiesInner h2,
+  .dineIntro h2,
+  .experienceIntro h2 {
+    font-size: clamp(38px, 10vw, 56px);
+    line-height: 1.08;
+  }
+
+  .sectionSubtext,
+  .homeSectionText,
+  .galleryHomeIntro p,
+  .staysIntro p,
+  .facilitiesInner p,
+  .dineIntro p,
+  .experienceIntro p {
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  /* ===== ABOUT / INTRO TEXT BLOCK ===== */
+  .aboutSection,
+  .aboutPreview,
+  .aboutSnippet {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .aboutPreviewText,
+  .aboutSectionText,
+  .aboutSnippetText {
+    max-width: 92%;
+    margin: 0 auto;
+    font-size: clamp(20px, 7.2vw, 34px);
+    line-height: 1.28;
+    text-align: center;
+  }
+
+  /* ===== SIGNATURE STAYS ON HOME ===== */
+  .staysHomeSection,
+  .signatureStaysSection {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .staysCards,
+  .signatureStayCards,
+  .stayCardsGrid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 14px !important;
+  }
+
+  .stayCard,
+  .signatureStayCard {
+    min-width: 0 !important;
+    border-radius: 28px !important;
+  }
+
+  .stayCard img,
+  .signatureStayCard img {
+    height: 250px !important;
+    object-fit: cover !important;
+  }
+
+  .stayCardTitle,
+  .signatureStayCardTitle {
+    font-size: 18px !important;
+    line-height: 1.15 !important;
+  }
+
+  .stayCard .btn,
+  .signatureStayCard .btn {
+    min-width: 0 !important;
+    padding: 10px 16px !important;
+    font-size: 12px !important;
+  }
+
+  /* ===== DINE / FACILITIES SPLIT SECTIONS ===== */
+  .facilitiesSplitWrap,
+  .dineSplitWrap,
+  .homeSplitWrap {
+    grid-template-columns: 1fr !important;
+    min-height: auto !important;
+  }
+
+  .facilitiesContent,
+  .dineContent,
+  .splitContent {
+    padding: 36px 18px !important;
+  }
+
+  .facilitiesInner,
+  .dineInner,
+  .splitInner {
+    max-width: 100% !important;
+  }
+
+  .facilitiesTags,
+  .dineTags,
+  .chipsWrap {
+    gap: 10px !important;
+  }
+
+  .facilitiesTags span,
+  .dineTags span,
+  .chip {
+    font-size: 11px !important;
+    padding: 10px 14px !important;
+    max-width: 100%;
+  }
+
+  .facilitiesImageWrap,
+  .dineImageWrap,
+  .splitImageWrap {
+    min-height: 300px !important;
+  }
+
+  /* ===== FOOTER ===== */
+  .footer,
+  .siteFooter {
+    padding-top: 48px !important;
+    padding-bottom: 110px !important;
+  }
+
+  .footerGrid,
+  .siteFooterGrid {
+    grid-template-columns: 1fr !important;
+    gap: 26px !important;
+  }
+
+  .footerBrand,
+  .siteFooterBrand {
+    text-align: center;
+  }
+
+  .footerCol,
+  .siteFooterCol {
+    text-align: left;
+  }
+
+  .footerBottom,
+  .siteFooterBottom {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    text-align: center !important;
+  }
+
+  /* ===== GALLERY ===== */
+  .galleryHomeSection {
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+  }
+
+  .galleryMarqueeViewport {
+    margin-top: 14px;
+  }
+
+  .galleryMarqueeTrack {
+    animation-duration: 58s !important; /* slower on mobile */
+    gap: 12px !important;
+  }
+
+  .galleryThumbCard {
+    flex: 0 0 72vw !important;
+    border-radius: 22px !important;
+  }
+
+  .galleryThumbCard img {
+    height: 250px !important;
+  }
+
+  .galleryViewerOverlay {
+    padding: 14px 12px 70px !important;
+  }
+
+  .galleryViewerImage {
+    max-height: 70vh !important;
+    border-radius: 14px !important;
+  }
+
+  .galleryViewerNav {
+    width: 44px !important;
+    height: 44px !important;
+    font-size: 28px !important;
+  }
+
+  /* ===== INNER PAGES ===== */
+  .pageTopSpacing,
+  .innerPage {
+    padding-top: 92px !important;
+  }
+
+  .enquiryPageIntro h1,
+  .roomsHero h1,
+  .innerHero h1,
+  .facilityHeroContent h1,
+  .banquetHeroContent h1 {
+    font-size: clamp(42px, 11vw, 64px) !important;
+    line-height: 1.04 !important;
+  }
+
+  .enquiryPageIntro p,
+  .roomsHero p,
+  .innerHero p,
+  .facilityHeroContent p,
+  .banquetHeroContent p {
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+    max-width: 94% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* ===== FORMS ===== */
+  .enquiryCard {
+    padding: 18px !important;
+    border-radius: 22px !important;
+  }
+
+  .enqGrid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .input,
+  .textarea {
+    font-size: 16px !important; /* avoid iPhone zoom */
+  }
+
+  .enqActions {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+  }
+
+  .enqActions .btn {
+    width: 100% !important;
+  }
+}
+
+/* =========================
+   EXTRA SMALL DEVICES
+========================= */
+@media (max-width: 480px) {
+  .heroBrand,
+  .heroLogoImage,
+  .hero-logo-image {
+    width: min(88vw, 360px);
+  }
+
+  .stayCard img,
+  .signatureStayCard img {
+    height: 220px !important;
+  }
+
+  .staysCards,
+  .signatureStayCards,
+  .stayCardsGrid {
+    gap: 12px !important;
+  }
+
+  .stayCardTitle,
+  .signatureStayCardTitle {
+    font-size: 16px !important;
+  }
+
+  .right-floating-bar,
+  .floatingPills,
+  .verticalActions {
+    right: 6px !important;
+  }
+
+  .enquiry-vertical-button,
+  .room-booking-vertical-button,
+  .floatingPill,
+  .floatingActionBtn {
+    width: 48px !important;
+    height: 126px !important;
+    font-size: 9px !important;
+  }
+
+  .galleryMarqueeTrack {
+    animation-duration: 68s !important;
+  }
+
+  .galleryThumbCard {
+    flex: 0 0 78vw !important;
+  }
+}
