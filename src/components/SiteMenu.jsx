@@ -47,7 +47,6 @@ export default function SiteMenu({ darkButton = false }) {
 
   <div className="menuCol">
     <Link to="/experiences" onClick={() => setOpen(false)}>Experience</Link>
-    <Link to="/gallery" onClick={() => setOpen(false)}>Gallery</Link>
   </div>
 </nav>
             </div>
