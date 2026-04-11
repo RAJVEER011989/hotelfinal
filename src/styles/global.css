@@ -1115,39 +1115,85 @@ footer {
   }
 }
 
-@media (max-width: 900px) {
+/* ===== MOBILE SITE MENU FIX ===== */
+@media (max-width: 768px) {
+  .siteFullMenu {
+    padding: 22px 20px 34px !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    overflow-y: auto !important;
+  }
+
   .siteFullMenuInner {
-    grid-template-columns: 1fr;
-    gap: 22px;
-    width: min(100%, calc(100% - 40px));
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
   }
 
   .siteFullMenuLogo {
-    justify-content: center;
-    padding-top: 0;
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    display: flex !important;
+    justify-content: center !important;
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;
   }
 
   .siteFullMenuLogoImg {
-    width: 110px;
-  }
-
-  .siteFullMenuNav {
-    align-items: flex-start;
-  }
-
-  .siteMenuLinkText {
-    font-size: clamp(34px, 8vw, 48px);
-  }
-
-  .siteMenuHoverLogo {
-    width: 28px;
-    height: 28px;
+    width: 110px !important;
+    max-width: 42vw !important;
   }
 
   .siteFullMenuClose {
-    top: 22px;
-    right: 22px;
-    font-size: 28px;
+    top: 18px !important;
+    right: 18px !important;
+    font-size: 24px !important;
+    z-index: 10 !important;
+  }
+
+  .siteFullMenuNav {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 18px 28px !important;
+    width: 100% !important;
+    align-items: start !important;
+  }
+
+  .menuCol {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    min-width: 0 !important;
+  }
+
+  .siteFullMenuNav a {
+    display: block !important;
+    font-size: clamp(28px, 7.2vw, 42px) !important;
+    line-height: 1.05 !important;
+    word-break: break-word !important;
+    overflow-wrap: anywhere !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .siteFullMenu {
+    padding: 20px 18px 28px !important;
+  }
+
+  .siteFullMenuNav {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .menuCol {
+    gap: 14px !important;
+  }
+
+  .siteFullMenuNav a {
+    font-size: clamp(26px, 9vw, 38px) !important;
   }
 }
 /* ===== Luxury Footer (Wine Theme) ===== */
