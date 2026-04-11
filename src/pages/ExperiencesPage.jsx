@@ -96,7 +96,6 @@ export default function ExperiencesPage() {
               </div>
 
               <div className="experienceShowcaseContent">
-                <div className="kicker">Experience</div>
                 <h2>{item.title}</h2>
                 <p>{item.description}</p>
 

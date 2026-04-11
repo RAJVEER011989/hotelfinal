@@ -6,6 +6,13 @@ import { ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
+  const handleFooterNavigate = () => {
+  setTimeout(() => {
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }, 50);
+};
   const [openSection, setOpenSection] = useState(null);
 
   const toggleSection = (section) => {
@@ -24,24 +31,24 @@ export default function Footer() {
         <div className="footerLuxuryGrid footerDesktop">
           <div>
             <h4>Stays</h4>
-            <Link to="/stays/deluxe-rooms" >Deluxe Rooms</Link>
-            <Link to="/stays/family-rooms" >Family Rooms</Link>
-            <Link to="/stays/suite-rooms" >Suite Rooms</Link>
-            <Link to="/stays/presidential-suite" >Presidential Suite</Link>
+            <Link to="/stays/deluxe-rooms" onClick={handleFooterNavigate} >Deluxe Rooms</Link>
+            <Link to="/stays/family-rooms" onClick={handleFooterNavigate} >Family Rooms</Link>
+            <Link to="/stays/suite-rooms" onClick={handleFooterNavigate} >Suite Rooms</Link>
+            <Link to="/stays/presidential-suite" onClick={handleFooterNavigate} >Presidential Suite</Link>
           </div>
 
           <div>
             <h4>Experiences</h4>
-            <Link to="/experiences/banquets" >Banquets</Link>
-            <Link to="/experiences/party-lawn" >Party Lawn</Link>
-            <Link to="/experiences/conference" >Conference Room</Link>
+            <Link to="/experiences/banquets" onClick={handleFooterNavigate} >Banquets</Link>
+            <Link to="/experiences/party-lawn" onClick={handleFooterNavigate} >Party Lawn</Link>
+            <Link to="/experiences/conference" onClick={handleFooterNavigate} >Conference Room</Link>
           </div>
 
           <div>
             <h4>Dine In</h4>
-            <Link to="/dine/sho-sha-rooftop" >Sho-Sha Rooftop</Link>
-            <Link to="/dine/level-up-terrace-lounge" >Level-Up Lounge</Link>
-            <Link to="/dine/daawat-fine-dine" >Daawat Fine Dine Restaurant</Link>
+            <Link to="/dine/sho-sha-rooftop" onClick={handleFooterNavigate} >Sho-Sha Rooftop</Link>
+            <Link to="/dine/level-up-terrace-lounge" onClick={handleFooterNavigate} >Level-Up Lounge</Link>
+            <Link to="/dine/daawat-fine-dine" onClick={handleFooterNavigate} >Daawat Fine Dine Restaurant</Link>
           </div>
 
           <div>
@@ -64,10 +71,10 @@ export default function Footer() {
               <ChevronDown size={20} />
             </button>
             <div className={`footerAccBody ${openSection === "stays" ? "open" : ""}`}>
-              <Link to="/stays/deluxe-rooms" >Deluxe Rooms</Link>
-            <Link to="/stays/family-rooms" >Family Rooms</Link>
-            <Link to="/stays/suite-rooms" >Suite Rooms</Link>
-            <Link to="/stays/presidential-suite" >Presidential Suite</Link>
+              <Link to="/stays/deluxe-rooms" onClick={handleFooterNavigate} >Deluxe Rooms</Link>
+            <Link to="/stays/family-rooms" onClick={handleFooterNavigate}>Family Rooms</Link>
+            <Link to="/stays/suite-rooms" onClick={handleFooterNavigate} >Suite Rooms</Link>
+            <Link to="/stays/presidential-suite" onClick={handleFooterNavigate} >Presidential Suite</Link>
             </div>
           </div>
 
@@ -81,9 +88,9 @@ export default function Footer() {
               <ChevronDown size={20} />
             </button>
             <div className={`footerAccBody ${openSection === "experiences" ? "open" : ""}`}>
-              <Link to="/experiences/banquets" >Banquets</Link>
-            <Link to="/experiences/party-lawn" >Party Lawn</Link>
-            <Link to="/experiences/conference" >Conference Room</Link>
+              <Link to="/experiences/banquets" onClick={handleFooterNavigate} >Banquets</Link>
+            <Link to="/experiences/party-lawn" onClick={handleFooterNavigate} >Party Lawn</Link>
+            <Link to="/experiences/conference" onClick={handleFooterNavigate} >Conference Room</Link>
             </div>
           </div>
 
@@ -97,9 +104,9 @@ export default function Footer() {
               <ChevronDown size={20} />
             </button>
             <div className={`footerAccBody ${openSection === "dine" ? "open" : ""}`}>
-              <Link to="/dine/sho-sha-rooftop" >Sho-Sha Rooftop</Link>
-            <Link to="/dine/level-up-terrace-lounge" >Level-Up Lounge</Link>
-            <Link to="/dine/daawat-fine-dine" >Daawat Fine Dine Restaurant</Link>
+              <Link to="/dine/sho-sha-rooftop" onClick={handleFooterNavigate} >Sho-Sha Rooftop</Link>
+            <Link to="/dine/level-up-terrace-lounge" onClick={handleFooterNavigate} >Level-Up Lounge</Link>
+            <Link to="/dine/daawat-fine-dine" onClick={handleFooterNavigate} >Daawat Fine Dine Restaurant</Link>
             </div>
           </div>
 
@@ -115,7 +122,6 @@ export default function Footer() {
             <div className={`footerAccBody ${openSection === "links" ? "open" : ""}`}>
               <Link to="/">Home</Link>
               <Link to="/about">About</Link>
-              <Link to="/gallery">Gallery</Link>
               <Link to="/enquiry">Enquiry</Link>
             </div>
           </div>
