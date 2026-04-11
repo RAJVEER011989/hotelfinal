@@ -13,7 +13,7 @@ const banquetMap = {
   ],
   suite: [
     { title: "Delux Rooms", route: "/stays/deluxe-rooms" },
-    { title: "Suite Rooms", route: "/stays/suite-rooms" },
+    { title: "Family Rooms", route: "/stays/family-rooms" },
     { title: "Presidential Suite", route: "/stays/presidential-suite" },
   ],presidential: [
     { title: "Family Rooms", route: "/stays/family-rooms" },
