@@ -86,7 +86,7 @@ export default function EnquiryForm() {
 
   const buildText = () => {
     const lines = [
-      "🌿 *Evergreen Retreat — Enquiry*",
+      "🌿 *Evergreen Retreat — Enquiry1*",
       `Full Name: ${form.name || "-"}`,
       `Phone: ${form.phone || "-"}`,
       `Email: ${form.email || "-"}`,

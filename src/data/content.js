@@ -1,32 +1,56 @@
+import deluxeImg from "../assets/stays/DeluxeRoomImages/deluxe-room.jpeg";
+import familyImg from "../assets/stays/FamilyRoomImages/family-room.jpg";
+import suiteImg from "../assets/stays/SuiteRoomImages/suite-room.jpg";
+import presidentialImg from "../assets/stays/PresidentialSuiteRoomImages/presidential-suite.jpg";
+import slide1 from "../assets/slides/outside.png";
+import slide2 from "../assets/slides/12.jpeg";
+import slide3 from "../assets/slides/14.jpeg";
+import slide4 from "../assets/slides/15.jpeg";
+import slide5 from "../assets/slides/17.jpeg";
+import slide6 from "../assets/slides/18.jpeg";
+import slide7 from "../assets/slides/19.jpeg";
+import slide8 from "../assets/slides/2.jpeg";
+import slide9 from "../assets/slides/3.jpeg";
+import slide10 from "../assets/slides/4.jpeg";
+import slide11 from "../assets/slides/1.jpeg";
+import slide12 from "../assets/slides/7.jpeg";
+import slide13 from "../assets/slides/8.jpeg";
+import slide14 from "../assets/slides/10.jpeg";
+
+
 export const SLIDES = [
-  "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=2600&q=80",
-  "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=2600&q=80",
-  "https://images.unsplash.com/photo-1501117716987-c8e1ecb210ff?auto=format&fit=crop&w=2600&q=80",
-  "https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=2600&q=80",
-  "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=2600&q=80",
+  slide1,slide2,slide3,slide4,slide5,slide6,slide7,slide8,slide9,slide10,slide11,slide12,slide13,slide14
 ];
 
 export const STAYS = [
   {
-    title: "Zen Tent",
-    desc: "Tranquil cluster around a serene pool",
-    img: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1800&q=80",
-  },
-  {
-    title: "Family Suite",
-    desc: "Spacious, perfect for families",
-    img: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1800&q=80",
-  },
-  {
-    title: "Family Room",
-    desc: "Comfort and connection",
-    img: "https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=1800&q=80",
-  },
-  {
-    title: "Luxury Suite",
-    desc: "A modern stay with a calm finish",
-    img: "https://images.unsplash.com/photo-1501117716987-c8e1ecb210ff?auto=format&fit=crop&w=1800&q=80",
-  },
+      title: "Deluxe Rooms",
+      image: deluxeImg,
+      route: "/stays/deluxe-rooms",
+      description:
+        "Thoughtfully designed for comfort and calm, our Deluxe Rooms offer a refined stay experience with elegant interiors, warm textures, and a soothing ambience that feels both luxurious and inviting.",
+    },
+    {
+      title: "Family Rooms",
+      image: familyImg,
+      route: "/stays/family-rooms",
+      description:
+        "Created for togetherness, our Family Rooms provide generous space, comfort, and convenience for memorable stays with loved ones, blending warmth, practicality, and effortless elegance.",
+    },
+    {
+      title: "Suite Rooms",
+      image: suiteImg,
+      route: "/stays/suite-rooms",
+      description:
+        "Our Suite Rooms bring together style, space, and sophistication, offering an elevated hospitality experience with beautifully curated interiors for guests who appreciate refined comfort.",
+    },
+    {
+      title: "Presidential Suite",
+      image: presidentialImg,
+      route: "/stays/presidential-suite",
+      description:
+        "The Presidential Suite is the finest expression of URRTH hospitality — an exclusive, grand, and beautifully crafted space for those seeking a stay marked by prestige, indulgence, and timeless elegance.",
+    },
 ];
 
 export const DINE_DATA = {

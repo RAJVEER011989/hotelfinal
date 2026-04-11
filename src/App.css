@@ -40,3 +40,13 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Kill scrollbars everywhere */
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}

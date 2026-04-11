@@ -1,13 +1,14 @@
+import { Link } from "react-router-dom";
 export default function FloatingActions() {
   return (
     <>
       <div className="sidePills" aria-label="Quick actions">
-        <a className="sidePill" href="#contact">
-          Contact
-        </a>
-        <a className="sidePill" href="#book">
+        <Link to="/enquiry" className="sidePill" href="#contact">
+          Enquiry
+        </Link>
+        <Link to="/enquiry" className="sidePill" href="#book">
           Room Booking
-        </a>
+        </Link>
       </div>
 
       <a
