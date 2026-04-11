@@ -40,13 +40,15 @@ export default function SiteMenu({ darkButton = false }) {
     <Link to="/" onClick={() => setOpen(false)}>Home</Link>
     <Link to="/about" onClick={() => setOpen(false)}>About Us</Link>
     <Link to="/stays" onClick={() => setOpen(false)}>Stay</Link>
-    <Link to="/dine" onClick={() => setOpen(false)}>Dine In</Link>
-    <Link to="/facilities" onClick={() => setOpen(false)}>Facilities</Link>
+   
+    
     
   </div>
 
   <div className="menuCol">
+     <Link to="/dine" onClick={() => setOpen(false)}>Dine In</Link>
     <Link to="/experiences" onClick={() => setOpen(false)}>Experience</Link>
+    <Link to="/facilities" onClick={() => setOpen(false)}>Facilities</Link>
   </div>
 </nav>
             </div>
