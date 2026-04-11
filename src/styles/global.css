@@ -2165,6 +2165,7 @@ html {
 }
 
 @media (max-width: 768px) {
+  
   .aboutTextHero {
     padding: 70px 0 40px;
   }
@@ -4956,4 +4957,71 @@ body,
 
 html {
   scroll-behavior: auto !important;
+}
+
+
+@media (max-width: 768px) {
+  .hero {
+    width: 100vw !important;
+    min-height: 82svh !important;
+    height: 82svh !important;
+    overflow: hidden !important;
+    background: #000 !important;
+  }
+
+  .slides,
+  .slide {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .slide {
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    transform: none !important;
+  }
+
+  .slide.active {
+    transform: none !important;
+  }
+
+  /* lighter overlay so image stays visible */
+  .slide::after {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.05) 0%,
+      rgba(0, 0, 0, 0.10) 30%,
+      rgba(0, 0, 0, 0.20) 65%,
+      rgba(0, 0, 0, 0.40) 100%
+    ) !important;
+  }
+
+  /* logo block slightly higher */
+  .heroCenter {
+    padding: 0 14px !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .heroTitleWrap {
+    transform: translateY(2vh) !important;
+  }
+
+  .heroLogo {
+    width: 82vw !important;
+    max-width: 82vw !important;
+  }
+
+  .sidePills {
+    right: 8px !important;
+  }
+
+  .musicBtn {
+    bottom: 88px !important;
+  }
+
+  .wa {
+    bottom: 86px !important;
+  }
 }
