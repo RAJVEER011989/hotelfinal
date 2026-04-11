@@ -154,7 +154,7 @@ const payload = {
   message: form.message.trim(),
 };
 
-      const response = await fetch("http://localhost:5000/send-enquiry", {
+      const response = await fetch("https://api.urrthhotels.com/send-enquiry", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
