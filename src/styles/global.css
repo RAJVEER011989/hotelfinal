@@ -4698,16 +4698,22 @@ html {
     gap: 24px;
   }
 
+ @media (max-width: 768px) {
   .footerTaglineImg {
-    margin-top: 0;
-    margin-bottom: 10px;
-    justify-content: center;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%); /* 🔥 full bleed */
+    margin-bottom: 20px;
   }
+}
 
+ @media (max-width: 768px) {
   .footerTaglineImg img {
-    width: 1500px;
-    max-width: 100%;
+    width: 100%;
+    height: auto;
+    transform: scale(1.6);   /* 🔥 THIS is the real fix */
+    transform-origin: center;
   }
+}
 
   .footerAccItem {
     border-bottom: 1px solid rgba(244, 210, 138, 0.4);

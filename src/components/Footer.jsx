@@ -141,7 +141,7 @@ export default function Footer() {
 
         <div className="footerBottomLuxury">
           <div>© 2026 URRTH. All rights reserved.</div>
-          <div className="footerCredit">Made with 🤍 by Truelip Technologies</div>
+          <div className="footerCredit">Designed & Devloped by Truelip Technologies</div>
         </div>
       </div>
     </footer>
