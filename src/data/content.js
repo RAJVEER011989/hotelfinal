@@ -2,7 +2,7 @@ import deluxeImg from "../assets/stays/DeluxeRoomImages/deluxe-room.jpeg";
 import familyImg from "../assets/stays/FamilyRoomImages/family-room.jpg";
 import suiteImg from "../assets/stays/SuiteRoomImages/suite-room.jpg";
 import presidentialImg from "../assets/stays/PresidentialSuiteRoomImages/presidential-suite.jpg";
-import slide1 from "../assets/slides/outside.png";
+import slide1 from "../assets/slides/21.jpg";
 import slide2 from "../assets/slides/12.jpeg";
 import slide3 from "../assets/slides/14.jpeg";
 import slide4 from "../assets/slides/15.jpeg";
