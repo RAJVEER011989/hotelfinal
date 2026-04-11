@@ -4793,8 +4793,66 @@ html {
     width: 104px;
   }
 }
+/* ===== FORCE SHOW MOBILE SIDE PILLS ===== */
 @media (max-width: 768px) {
-  .sidePills .sidePill:last-child {
-    display: none;
+  .sidePills {
+    display: flex !important;
+    flex-direction: column !important;
+    position: fixed !important;
+    right: 8px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    gap: 10px !important;
+    z-index: 9999 !important;
+    pointer-events: auto !important;
+  }
+
+  .sidePill {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    writing-mode: vertical-rl !important;
+    transform: rotate(180deg) !important;
+    width: 46px !important;
+    min-width: 46px !important;
+    min-height: 120px !important;
+    padding: 12px 8px !important;
+    border-radius: 18px !important;
+    background: rgba(184, 155, 94, 0.82) !important;
+    color: rgba(255, 255, 255, 0.96) !important;
+    font-size: 10px !important;
+    letter-spacing: 0.16em !important;
+    text-transform: uppercase !important;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .sidePill:hover {
+    transform: rotate(180deg) translateY(-2px) !important;
+  }
+
+  /* keep enquiry more visible */
+  .sidePill:first-child {
+    background: rgba(184, 155, 94, 0.9) !important;
+  }
+
+  /* slightly softer second pill */
+  .sidePill:last-child {
+    background: rgba(184, 155, 94, 0.72) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidePills {
+    right: 1px !important;
+  }
+
+  .sidePill {
+    width: 30px !important;
+    min-width: 42px !important;
+    min-height: 90px !important;
+    font-size: 9px !important;
+    padding: 8px 2px !important;
   }
 }
