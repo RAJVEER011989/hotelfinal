@@ -4448,4 +4448,190 @@ html {
   .galleryThumbCard {
     flex: 0 0 80vw;
   }
+}@media (max-width: 768px) {
+  /* ===== HERO ===== */
+  .hero {
+    min-height: 82svh;
+    height: 82svh;
+  }
+
+  .slides,
+  .slide {
+    height: 82svh;
+  }
+
+  .topRow {
+    width: calc(100% - 24px);
+    padding-top: 10px;
+  }
+
+  .logoCenter {
+    margin-top: 8px;
+  }
+
+  .mainLogo {
+    height: 64px;
+    margin-top: 0;
+  }
+
+  .heroCenter {
+    padding: 0 14px;
+  }
+
+  .heroTitleWrap {
+    max-width: 100%;
+    width: 100%;
+    transform: translateY(3vh);
+  }
+
+  .heroLogo {
+    width: 82vw;
+    max-width: 82vw;
+  }
+
+  .dots {
+    bottom: 84px;
+  }
+
+  /* ===== SIDE ACTIONS ===== */
+  .sidePills {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    gap: 10px;
+    z-index: 120;
+  }
+
+  .sidePill {
+    border-radius: 20px;
+    padding: 12px 8px;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    min-height: 122px;
+    width: 48px;
+    background: rgba(184, 155, 94, 0.78);
+  }
+
+  /* keep enquiry, soften booking */
+  .sidePill:last-child {
+    opacity: 0.9;
+  }
+
+  /* if you want only enquiry on mobile, uncomment this
+  .sidePill:last-child {
+    display: none;
+  }
+  */
+
+  .musicBtn {
+    width: 52px;
+    height: 52px;
+    left: 14px;
+    bottom: 92px;
+  }
+
+  .wa {
+    width: 58px;
+    height: 58px;
+    right: 14px;
+    bottom: 88px;
+  }
+
+  /* ===== FOOTER MOBILE ===== */
+  .footerLuxury {
+    padding: 56px 0 120px;
+  }
+
+  .footerLuxuryInner {
+    gap: 28px;
+  }
+
+  .footerTaglineImg {
+    margin-top: 0;
+    margin-bottom: 6px;
+    justify-content: center;
+  }
+
+  .footerTaglineImg img {
+    width: 260px;
+    max-width: 78%;
+  }
+
+  .footerLuxuryGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .footerLuxuryGrid h4 {
+    margin-bottom: 14px;
+    text-align: center;
+    padding-bottom: 8px;
+  }
+
+  .footerLuxuryGrid h4::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footerLuxuryGrid a,
+  .footerContactItem {
+    justify-content: center;
+    margin: 10px 0;
+    font-size: 15px;
+  }
+
+  .footerCenterLogo {
+    order: -1;
+    padding-top: 0;
+  }
+
+  .footerCenterLogo img {
+    width: 120px;
+  }
+
+  .footerBottomLuxury {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroLogo {
+    width: 78vw;
+    max-width: 78vw;
+  }
+
+  .mainLogo {
+    height: 58px;
+  }
+
+  .sidePills {
+    right: 8px;
+  }
+
+  .sidePill {
+    width: 44px;
+    min-height: 112px;
+    font-size: 9px;
+    padding: 10px 6px;
+  }
+
+  .musicBtn {
+    bottom: 88px;
+  }
+
+  .wa {
+    bottom: 84px;
+  }
+
+  .footerTaglineImg img {
+    width: 220px;
+  }
+
+  .footerCenterLogo img {
+    width: 108px;
+  }
 }
