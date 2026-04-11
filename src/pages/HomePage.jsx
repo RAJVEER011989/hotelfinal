@@ -20,7 +20,6 @@ export default function HomePage() {
       <Dine />
       <Facilities/>
       <Gallery />
-      <BookingContact />
       <Footer />
     </>
   );
