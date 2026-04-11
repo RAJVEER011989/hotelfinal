@@ -1,65 +1,124 @@
 import { useEffect, useRef, useState } from "react";
 
+const STORAGE_KEY = "urrth_music_enabled";
+
 export default function BackgroundMusic() {
   const audioRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(false); // real state
-  const [hasStartedOnce, setHasStartedOnce] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isReady, setIsReady] = useState(false);
 
-  const startAudio = async () => {
+  const syncStateFromAudio = () => {
     const audio = audioRef.current;
     if (!audio) return;
+    setIsPlaying(!audio.paused && !audio.ended);
+  };
 
-    audio.volume = 0.35;
+  const tryPlay = async () => {
+    const audio = audioRef.current;
+    if (!audio) return false;
 
     try {
       await audio.play();
-      setIsPlaying(true);
-      setHasStartedOnce(true);
+      syncStateFromAudio();
+      return true;
     } catch {
-      // autoplay may still be blocked, ignore
+      syncStateFromAudio();
+      return false;
     }
   };
 
   useEffect(() => {
-    // Try immediately (works only if browser allows)
-    startAudio();
+    const audio = audioRef.current;
+    if (!audio) return;
 
-    // If blocked, start on first interaction ANYWHERE
-    const onFirstInteraction = () => {
-      if (!hasStartedOnce) startAudio();
+    audio.volume = 0.35;
+    audio.preload = "auto";
+    audio.playsInline = true;
+
+    const savedPreference = localStorage.getItem(STORAGE_KEY);
+
+    const onPlay = () => setIsPlaying(true);
+    const onPause = () => setIsPlaying(false);
+    const onEnded = () => setIsPlaying(false);
+    const onCanPlay = () => setIsReady(true);
+
+    audio.addEventListener("play", onPlay);
+    audio.addEventListener("pause", onPause);
+    audio.addEventListener("ended", onEnded);
+    audio.addEventListener("canplay", onCanPlay);
+
+    syncStateFromAudio();
+
+    // only auto-attempt if user had previously enabled music
+    if (savedPreference === "true") {
+      tryPlay();
+    }
+
+    return () => {
+      audio.removeEventListener("play", onPlay);
+      audio.removeEventListener("pause", onPause);
+      audio.removeEventListener("ended", onEnded);
+      audio.removeEventListener("canplay", onCanPlay);
+    };
+  }, []);
+
+  useEffect(() => {
+    const onFirstInteraction = async () => {
+      const savedPreference = localStorage.getItem(STORAGE_KEY);
+      const audio = audioRef.current;
+      if (!audio) return;
+
+      if (savedPreference === "true" && audio.paused) {
+        await tryPlay();
+      }
+
+      window.removeEventListener("click", onFirstInteraction);
+      window.removeEventListener("touchstart", onFirstInteraction);
+      window.removeEventListener("keydown", onFirstInteraction);
     };
 
     window.addEventListener("click", onFirstInteraction, { passive: true });
     window.addEventListener("touchstart", onFirstInteraction, { passive: true });
     window.addEventListener("keydown", onFirstInteraction);
-    window.addEventListener("scroll", onFirstInteraction, { passive: true });
 
     return () => {
       window.removeEventListener("click", onFirstInteraction);
       window.removeEventListener("touchstart", onFirstInteraction);
       window.removeEventListener("keydown", onFirstInteraction);
-      window.removeEventListener("scroll", onFirstInteraction);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [hasStartedOnce]);
+  }, []);
 
   const toggleMusic = async () => {
     const audio = audioRef.current;
     if (!audio) return;
 
-    if (isPlaying) {
+    if (!audio.paused) {
       audio.pause();
+      localStorage.setItem(STORAGE_KEY, "false");
       setIsPlaying(false);
       return;
     }
 
-    await startAudio();
+    const played = await tryPlay();
+    localStorage.setItem(STORAGE_KEY, played ? "true" : "false");
   };
 
   return (
     <>
-      <audio ref={audioRef} src="music/urban-atmosphere-corporate-ambient.mp3" loop preload="auto" />
-      <button onClick={toggleMusic} className="musicBtn" aria-label="Toggle music">
+      <audio
+        ref={audioRef}
+        src="/music/urban-atmosphere-corporate-ambient.mp3"
+        loop
+        preload="auto"
+        playsInline
+      />
+      <button
+        type="button"
+        onClick={toggleMusic}
+        className="musicBtn"
+        aria-label={isPlaying ? "Pause music" : "Play music"}
+        title={isPlaying ? "Pause music" : "Play music"}
+      >
         {isPlaying ? <VolumeIcon /> : <MuteIcon />}
       </button>
     </>
@@ -68,7 +127,7 @@ export default function BackgroundMusic() {
 
 function VolumeIcon() {
   return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <path d="M5 9v6h4l5 4V5L9 9H5z" fill="currentColor" />
       <path
         d="M16 8c1.5 1.5 1.5 6.5 0 8"
@@ -82,7 +141,7 @@ function VolumeIcon() {
 
 function MuteIcon() {
   return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <path d="M5 9v6h4l5 4V5L9 9H5z" fill="currentColor" />
       <path
         d="M16 8l4 8M20 8l-4 8"
