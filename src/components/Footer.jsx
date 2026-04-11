@@ -128,7 +128,7 @@ export default function Footer() {
               <ChevronDown size={20} />
             </button>
             <div className={`footerAccBody ${openSection === "contact" ? "open" : ""}`}>
-              <a href="tel:+917222902226">+91 7222902226</a>
+              <a href="tel:+919479282528">+91 9479282528</a>
               <a href="mailto:info@urrthhotels.com">info@urrthhotels.com</a>
               <Link to="/enquiry">Send Enquiry</Link>
             </div>
@@ -141,11 +141,6 @@ export default function Footer() {
 
         <div className="footerBottomLuxury">
           <div>© 2026 URRTH. All rights reserved.</div>
-          <div className="footerLegalLinks">
-            <a href="/privacy-policy">Privacy Policy</a>
-            <a href="/terms-of-service">Terms of Service</a>
-            <a href="/cookies-policy">Cookies Policy</a>
-          </div>
           <div className="footerCredit">Made with 🤍 by Truelip Technologies</div>
         </div>
       </div>
