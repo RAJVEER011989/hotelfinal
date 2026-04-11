@@ -1,6 +1,6 @@
 import { useState } from "react";
 import footerLogo from "../assets/logo/TM (2).png";
-import footerTagline from "../assets/logo/tag (2).png";
+import footerTagline from "../assets/logo/tag(3).png";
 import { ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 
