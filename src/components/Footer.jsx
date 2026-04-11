@@ -1,16 +1,25 @@
-import logo from "../assets/logo/TM (2).png";
-import tagline from "../assets/logo/tag (2).png";
+import { useState } from "react";
+import footerLogo from "../assets/logo/TM (2).png";
+import footerTagline from "../assets/logo/tag (2).png";
+import { ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
+  const [openSection, setOpenSection] = useState(null);
+
+  const toggleSection = (section) => {
+    setOpenSection((prev) => (prev === section ? null : section));
+  };
+
   return (
     <footer className="footerLuxury">
       <div className="container footerLuxuryInner">
         <div className="footerTaglineImg">
-          <img src={tagline} alt="Celebrate Every Occasion" />
+          <img src={footerTagline} alt="Celebrate Every Occasion" />
         </div>
 
-        <div className="footerLuxuryGrid">
+        {/* Desktop footer */}
+        <div className="footerLuxuryGrid footerDesktop">
           <div>
             <h4>Stays</h4>
             <Link to="/stays/deluxe-rooms" >Deluxe Rooms</Link>
@@ -24,11 +33,10 @@ export default function Footer() {
             <Link to="/experiences/banquets" >Banquets</Link>
             <Link to="/experiences/party-lawn" >Party Lawn</Link>
             <Link to="/experiences/conference" >Conference Room</Link>
-  
           </div>
 
           <div>
-            <h4>Dine</h4>
+            <h4>Dine In</h4>
             <Link to="/dine/sho-sha-rooftop" >Sho-Sha Rooftop</Link>
             <Link to="/dine/level-up-terrace-lounge" >Level-Up Lounge</Link>
             <Link to="/dine/daawat-fine-dine" >Daawat Fine Dine Restaurant</Link>
@@ -36,45 +44,109 @@ export default function Footer() {
 
           <div>
             <h4>Contact Us</h4>
+            <a href="tel:+919479282528">+91 9479282528</a>
+            <a href="mailto:info@urrthhotels.com">info@urrthhotels.com</a>
+            <Link to="/enquiry">Enquiry</Link>
+          </div>
+        </div>
 
-            <a href="tel:+919479282528" className="footerContactItem">
-              <span className="footerIcon">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.63 2.62a2 2 0 0 1-.45 2.11L8 9.91a16 16 0 0 0 6.09 6.09l1.46-1.29a2 2 0 0 1 2.11-.45c.84.3 1.72.51 2.62.63A2 2 0 0 1 22 16.92Z" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </span>
-              +91 9479282528
-            </a>
+        {/* Mobile accordion footer */}
+        <div className="footerMobileAccordion">
+          <div className="footerAccItem">
+            <button
+              className={`footerAccHead ${openSection === "stays" ? "open" : ""}`}
+              onClick={() => toggleSection("stays")}
+              type="button"
+            >
+              <span>Stays</span>
+              <ChevronDown size={20} />
+            </button>
+            <div className={`footerAccBody ${openSection === "stays" ? "open" : ""}`}>
+              <Link to="/stays/deluxe-rooms" >Deluxe Rooms</Link>
+            <Link to="/stays/family-rooms" >Family Rooms</Link>
+            <Link to="/stays/suite-rooms" >Suite Rooms</Link>
+            <Link to="/stays/presidential-suite" >Presidential Suite</Link>
+            </div>
+          </div>
 
-            <a href="mailto:@urrth.com" className="footerContactItem">
-              <span className="footerIcon">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
-                  <path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z" stroke="currentColor" strokeWidth="1.8"/>
-                  <path d="m22 6-10 7L2 6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </span>
-              info@urrthhotels.com
-            </a>
+          <div className="footerAccItem">
+            <button
+              className={`footerAccHead ${openSection === "experiences" ? "open" : ""}`}
+              onClick={() => toggleSection("experiences")}
+              type="button"
+            >
+              <span>Experiences</span>
+              <ChevronDown size={20} />
+            </button>
+            <div className={`footerAccBody ${openSection === "experiences" ? "open" : ""}`}>
+              <Link to="/experiences/banquets" >Banquets</Link>
+            <Link to="/experiences/party-lawn" >Party Lawn</Link>
+            <Link to="/experiences/conference" >Conference Room</Link>
+            </div>
+          </div>
 
-            <div className="footerContactItem">
-              <span className="footerIcon">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
-                  <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0Z" stroke="currentColor" strokeWidth="1.8"/>
-                  <circle cx="12" cy="10" r="3" stroke="currentColor" strokeWidth="1.8"/>
-                </svg>
-              </span>
-              Rajnandgaon, Chhattisgarh
+          <div className="footerAccItem">
+            <button
+              className={`footerAccHead ${openSection === "dine" ? "open" : ""}`}
+              onClick={() => toggleSection("dine")}
+              type="button"
+            >
+              <span>Dine In</span>
+              <ChevronDown size={20} />
+            </button>
+            <div className={`footerAccBody ${openSection === "dine" ? "open" : ""}`}>
+              <Link to="/dine/sho-sha-rooftop" >Sho-Sha Rooftop</Link>
+            <Link to="/dine/level-up-terrace-lounge" >Level-Up Lounge</Link>
+            <Link to="/dine/daawat-fine-dine" >Daawat Fine Dine Restaurant</Link>
+            </div>
+          </div>
+
+          <div className="footerAccItem">
+            <button
+              className={`footerAccHead ${openSection === "links" ? "open" : ""}`}
+              onClick={() => toggleSection("links")}
+              type="button"
+            >
+              <span>Links</span>
+              <ChevronDown size={20} />
+            </button>
+            <div className={`footerAccBody ${openSection === "links" ? "open" : ""}`}>
+              <Link to="/">Home</Link>
+              <Link to="/about">About</Link>
+              <Link to="/gallery">Gallery</Link>
+              <Link to="/enquiry">Enquiry</Link>
+            </div>
+          </div>
+
+          <div className="footerAccItem">
+            <button
+              className={`footerAccHead ${openSection === "contact" ? "open" : ""}`}
+              onClick={() => toggleSection("contact")}
+              type="button"
+            >
+              <span>Contact Us</span>
+              <ChevronDown size={20} />
+            </button>
+            <div className={`footerAccBody ${openSection === "contact" ? "open" : ""}`}>
+              <a href="tel:+917222902226">+91 7222902226</a>
+              <a href="mailto:info@urrthhotels.com">info@urrthhotels.com</a>
+              <Link to="/enquiry">Send Enquiry</Link>
             </div>
           </div>
         </div>
 
         <div className="footerCenterLogo">
-          <img src={logo} alt="Urtth" />
+          <img src={footerLogo} alt="URRTH" />
         </div>
 
         <div className="footerBottomLuxury">
-          <span>© 2026 Urtth. All rights reserved.</span>
-          <span className="footerCredit">Designed & developed by Truelip Technologies</span>
+          <div>© 2026 URRTH. All rights reserved.</div>
+          <div className="footerLegalLinks">
+            <a href="/privacy-policy">Privacy Policy</a>
+            <a href="/terms-of-service">Terms of Service</a>
+            <a href="/cookies-policy">Cookies Policy</a>
+          </div>
+          <div className="footerCredit">Made with 🤍 by Truelip Technologies</div>
         </div>
       </div>
     </footer>

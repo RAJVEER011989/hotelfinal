@@ -4634,4 +4634,162 @@ html {
   .footerCenterLogo img {
     width: 108px;
   }
+}/* ===== Footer mobile accordion ===== */
+.footerDesktop {
+  display: grid;
+}
+
+.footerMobileAccordion {
+  display: none;
+}
+
+.footerLegalLinks {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footerLegalLinks a {
+  color: #f4d28a;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .footerDesktop {
+    display: none !important;
+  }
+
+  .footerMobileAccordion {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 8px;
+  }
+
+  .footerLuxury {
+    padding: 48px 0 120px;
+  }
+
+  .footerLuxuryInner {
+    gap: 24px;
+  }
+
+  .footerTaglineImg {
+    margin-top: 0;
+    margin-bottom: 10px;
+    justify-content: center;
+  }
+
+  .footerTaglineImg img {
+    width: 260px;
+    max-width: 82%;
+  }
+
+  .footerAccItem {
+    border-bottom: 1px solid rgba(244, 210, 138, 0.4);
+  }
+
+  .footerAccItem:first-child {
+    border-top: 1px solid rgba(244, 210, 138, 0.4);
+  }
+
+  .footerAccHead {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #f4d28a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 2px;
+    font-size: 17px;
+    cursor: pointer;
+    text-align: left;
+  }
+
+  .footerAccHead span {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+  }
+
+  .footerAccHead svg {
+    transition: transform 0.28s ease;
+  }
+
+  .footerAccHead.open svg {
+    transform: rotate(180deg);
+  }
+
+  .footerAccBody {
+    max-height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+    padding: 0 2px;
+  }
+
+  .footerAccBody.open {
+    max-height: 280px;
+    padding: 0 2px 18px;
+  }
+
+  .footerAccBody a {
+    color: rgba(244, 210, 138, 0.92);
+    font-size: 15px;
+    line-height: 1.6;
+    text-decoration: none;
+  }
+
+  .footerCenterLogo {
+    justify-content: center;
+    padding-top: 6px;
+  }
+
+  .footerCenterLogo img {
+    width: 118px;
+  }
+
+  .footerBottomLuxury {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+    font-size: 13px;
+    padding-top: 18px;
+    margin-top: 4px;
+  }
+
+  .footerLegalLinks {
+    gap: 14px;
+  }
+
+  .footerLegalLinks a {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footerTaglineImg img {
+    width: 220px;
+  }
+
+  .footerAccHead {
+    padding: 20px 2px;
+  }
+
+  .footerAccHead span {
+    font-size: 22px;
+  }
+
+  .footerAccBody a {
+    font-size: 14px;
+  }
+
+  .footerCenterLogo img {
+    width: 104px;
+  }
 }
