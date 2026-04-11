@@ -4705,8 +4705,8 @@ html {
   }
 
   .footerTaglineImg img {
-    width: 1000px;
-    max-width: 82%;
+    width: 1500px;
+    max-width: 100%;
   }
 
   .footerAccItem {
