@@ -3269,6 +3269,29 @@ html {
   justify-content: flex-end;
 }
 
+@media (max-width: 768px) {
+  .innerHeader {
+  position:static;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  background: transparent;
+  border: none;
+
+  transition: all 0.4s ease;
+}
+  .innerHeaderRow {
+    width: calc(100% - 24px);
+    padding: 10px 0;
+  }
+
+  .innerHeaderLogo img {
+    height: 64px;
+  }
+}
+
 /* menu button adjustment */
 /* default → HERO (light) */
 .menuBtn {
@@ -4582,7 +4605,7 @@ html {
   }
 
   .footerCenterLogo {
-    order: -1;
+    order: 0;
     padding-top: 0;
   }
 
@@ -4632,7 +4655,7 @@ html {
   }
 
   .footerCenterLogo img {
-    width: 108px;
+    width: 200px;
   }
 }/* ===== Footer mobile accordion ===== */
 .footerDesktop {
@@ -4682,7 +4705,7 @@ html {
   }
 
   .footerTaglineImg img {
-    width: 260px;
+    width: 1000px;
     max-width: 82%;
   }
 
