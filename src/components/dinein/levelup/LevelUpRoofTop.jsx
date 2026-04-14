@@ -35,7 +35,7 @@ export default function ShoShaRooftop() {
 
       <DineInNavigator current={"levelup"}/>
 
-      <DineInFaqs type="shosha" />
+      <DineInFaqs diningType="levelup" />
 
       <Footer />
     </>

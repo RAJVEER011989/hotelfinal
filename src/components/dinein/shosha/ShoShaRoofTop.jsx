@@ -33,7 +33,7 @@ export default function ShoShaRooftop() {
       <DineInHighlights type="shosha" />
       <DineInNavigator current={"shosha"}/>
 
-      <DineInFaqs type="shosha" />
+      <DineInFaqs diningType="shosha" />
 
       <Footer />
     </>

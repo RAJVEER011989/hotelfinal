@@ -35,7 +35,7 @@ export default function ShoShaRooftop() {
 
       <DineInNavigator current={"dawwat"}/>
 
-      <DineInFaqs type="shosha" />
+      <DineInFaqs diningType="daawat"/>
 
       <Footer />
     </>
