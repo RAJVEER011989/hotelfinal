@@ -2,7 +2,7 @@ import deluxeImg from "../assets/stays/DeluxeRoomImages/deluxe-room.jpeg";
 import familyImg from "../assets/stays/FamilyRoomImages/family-room.jpg";
 import suiteImg from "../assets/stays/SuiteRoomImages/suite-room.jpg";
 import presidentialImg from "../assets/stays/PresidentialSuiteRoomImages/presidential-suite.jpg";
-import slide1 from "../assets/slides/outside.png";
+//import slide1 from "../assets/slides/outside.png";
 import slide2 from "../assets/slides/12.jpeg";
 import slide3 from "../assets/slides/14.jpeg";
 import slide4 from "../assets/slides/15.jpeg";
@@ -19,7 +19,7 @@ import slide14 from "../assets/slides/10.jpeg";
 
 
 export const SLIDES = [
-  slide1,slide2,slide3,slide4,slide5,slide6,slide7,slide8,slide9,slide10,slide11,slide12,slide13,slide14
+  slide2,slide3,slide4,slide5,slide6,slide7,slide8,slide9,slide10,slide11,slide12,slide13,slide14
 ];
 
 export const STAYS = [
