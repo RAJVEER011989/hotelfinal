@@ -7,7 +7,7 @@ import BanquetNavigator from "../BanquetNavigator.jsx";
 import BanquetHighlights from "../BanquetHighlights.jsx";
 import BanquetFaqs from "../BanquetFaqs.jsx";
 
-import img1 from "../../../assets/banquets/emerald/1.jpg";
+import img1 from "../../../assets/banquets/emerald/emerald.png";
 
 const slides = [img1];
 

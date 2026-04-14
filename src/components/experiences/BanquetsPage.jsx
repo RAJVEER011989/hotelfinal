@@ -5,7 +5,7 @@ import Footer from "../Footer.jsx";
 import ExperienceNavigator from "../experiences/ExperienceNavigator.jsx"
 
 
-import emeraldImg from "../../assets/banquets/emerald/1.jpg";
+import emeraldImg from "../../assets/banquets/emerald/emerald.png";
 import sapphireImg from "../../assets/banquets/sapphire/1.jpeg";
 import pearlImg from "../../assets/banquets/pearl/1.jpeg";
 
