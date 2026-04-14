@@ -19,17 +19,16 @@ export default function FamilyRoomsPage() {
           <div className="roomDetailHeroInner reveal">
             <h1>Family Rooms</h1>
             <p>
-              Created for togetherness, our Family Rooms provide generous space,
-              comfort, and convenience for memorable stays with loved ones,
-              blending warmth, practicality, and effortless elegance.
+              A comfortable family room with separate spaces for rest, fun, and time together.
+Oversized velvet sofas, city views, and a cozy setting for games and snacks make it ideal for shared moments.
             </p>
           </div>
         </div>
       </section>
 <FamilyRoomGallery/>
-<RoomHighlights/>
+<RoomHighlights roomType="family"/>
 <RoomsNavigator current={"family"}/>
-<RoomFAQs/>
+<RoomFAQs roomType="family"/>
  
       <Footer />
     </>

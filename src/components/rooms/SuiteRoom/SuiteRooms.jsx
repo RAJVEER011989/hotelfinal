@@ -17,18 +17,16 @@ export default function SuiteRooms() {
           <div className="roomDetailHeroInner reveal">
             <h1>Suite Rooms</h1>
             <p>
-              Our Suite Rooms bring together style, space, and sophistication,
-              offering an elevated hospitality experience with beautifully curated
-              interiors for guests who appreciate refined comfort.
+              A peaceful suite with elegant interiors and a comfortable lounge. Complete with plush seating and a jacuzzi for a relaxing, spa-like experience.
             </p>
           </div>
         </div>
       </section>
       <SuiteRoomGallery/>
-      <RoomHighlights/>
+      <RoomHighlights roomType="suite"/>
       <RoomsNavigator current={"suite"}/>
 
-      <RoomFAQs />
+      <RoomFAQs roomType="suite" />
 
       <Footer />
     </>

@@ -24,18 +24,17 @@ export default function DeluxeRoomPage() {
           <div className="roomDetailHeroInner reveal">
             <h1>Deluxe Rooms</h1>
             <p>
-              Thoughtfully designed for comfort and calm, our Deluxe Rooms offer
-              a refined stay experience with elegant interiors, warm textures,
-              and a soothing ambience that feels both luxurious and inviting.
+              A refined space designed for comfort, simplicity, and effortless relaxation.
+With elegant interiors and a calm setting, it offers a perfect personal retreat.
             </p>
           </div>
         </div>
       </section>
 
       <DeluxeRoomGallery/>
-      <RoomHighlights/>
+      <RoomHighlights roomType="deluxe"/>
       <RoomsNavigator current={"delux"}/>
-      <RoomFAQs/>
+      <RoomFAQs roomType="deluxe"/>
       <Footer />
     </>
   );

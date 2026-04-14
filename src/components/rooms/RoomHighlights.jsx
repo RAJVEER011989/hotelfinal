@@ -1,67 +1,96 @@
+import React from "react";
+import { roomHighlightsData } from "./RoomHighlightsData";
+
+// Lucide Icons
 import {
-  BedDouble,
-  Wind,
+  Bed,
+  Snowflake,
   Tv,
-  Coffee,
   Wifi,
-  Briefcase,
+  Coffee,
   Bath,
-  Droplets,
-  Shirt,
-  Phone,
-  ConciergeBell
+  Sparkles,
+  Lock,
+  Sofa,
+  ShieldCheck,
+  Baby,
+  Utensils,
+  Wine,
+  Layout,
+  Star,
+  Briefcase,
+  Crown,
+  Gem,
+  Car,
+  Users,
+  Heart,
+  User,
 } from "lucide-react";
 
-export default function RoomHighlights() {
+// 🔥 ICON MAPPING
+const iconMap = {
+  bed: Bed,
+  "bed-double": Bed,
+  snowflake: Snowflake,
+  tv: Tv,
+  wifi: Wifi,
+  coffee: Coffee,
+  bath: Bath,
+  sparkles: Sparkles,
+  lock: Lock,
+  sofa: Sofa,
+  "shield-check": ShieldCheck,
+  baby: Baby,
+  utensils: Utensils,
+  wine: Wine,
+  layout: Layout,
+  star: Star,
+  briefcase: Briefcase,
+  crown: Crown,
+  gem: Gem,
+  car: Car,
+  users: Users,
+  heart: Heart,
+  user: User,
+};
+
+export default function RoomHighlights({ roomType }) {
+  const data = roomHighlightsData[roomType];
+
+  if (!data) return null;
+
   return (
     <section className="roomHighlightsSection">
       <div className="container">
-
-        <div className="roomHighlightsIntro reveal">
-          <h2>Room Highlights</h2>
+        {/* TITLE */}
+        <div className="roomHighlightsIntro">
+          <h2>{data.title}</h2>
         </div>
 
-        <div className="roomHighlightsWrap reveal">
+        {/* GROUPS */}
+        <div className="roomHighlightsWrap">
+          {data.groups.map((group, index) => (
+            <div key={index} className="roomHighlightGroup">
+              <h4>{group.title}</h4>
 
-          {/* Comforts */}
-          <div className="roomHighlightGroup">
-            <h4>In-Room Comforts</h4>
+              <div className="roomHighlightGrid">
+                {group.items.map((item, i) => {
+                  const Icon = iconMap[item.icon];
 
-            <div className="roomHighlightGrid">
-              <Amenity icon={<BedDouble size={20} />} label="King / Twin Bed" />
-              <Amenity icon={<Wind size={20} />} label="Air Conditioning" />
-              <Amenity icon={<Tv size={20} />} label="Smart TV" />
-              <Amenity icon={<Coffee size={20} />} label="Tea & Coffee" />
-              <Amenity icon={<Wifi size={20} />} label="High-Speed Wi-Fi" />
-              <Amenity icon={<Briefcase size={20} />} label="Work Desk" />
+                  return (
+                    <div key={i} className="roomHighlightItem">
+                      <span className="roomHighlightIcon">
+                        {Icon && <Icon size={20} strokeWidth={1.8} />}
+                      </span>
+                      <span>{item.label}</span>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
-          </div>
-
-          {/* Essentials */}
-          <div className="roomHighlightGroup">
-            <h4>Essentials</h4>
-
-            <div className="roomHighlightGrid">
-              <Amenity icon={<Bath size={20} />} label="Elegant Bathroom" />
-              <Amenity icon={<Droplets size={20} />} label="Hot & Cold Water" />
-              <Amenity icon={<Shirt size={20} />} label="Wardrobe Space" />
-              <Amenity icon={<Phone size={20} />} label="In-room Telephone" />
-              <Amenity icon={<ConciergeBell size={20} />} label="Room Service" />
-            </div>
-          </div>
-
+          ))}
         </div>
       </div>
     </section>
-  );
-}
-
-/* Reusable Item */
-function Amenity({ icon, label }) {
-  return (
-    <div className="roomHighlightItem">
-      <span className="roomHighlightIcon">{icon}</span>
-      <span>{label}</span>
-    </div>
   );
 }

@@ -7,12 +7,12 @@ const banquetMap = {
     { title: "Presidential Suite", route: "/stays/presidential-suite" },
   ],
   family: [
-    { title: "Delux Rooms", route: "/stays/deluxe-rooms" },
+    { title: "Deluxe Rooms", route: "/stays/deluxe-rooms" },
     { title: "Suite Rooms", route: "/stays/suite-rooms" },
     { title: "Presidential Suite", route: "/stays/presidential-suite" },
   ],
   suite: [
-    { title: "Delux Rooms", route: "/stays/deluxe-rooms" },
+    { title: "Deluxe Rooms", route: "/stays/deluxe-rooms" },
     { title: "Family Rooms", route: "/stays/family-rooms" },
     { title: "Presidential Suite", route: "/stays/presidential-suite" },
   ],presidential: [

@@ -14,7 +14,7 @@ const roomData = [
     image: deluxeImg,
     route: "/stays/deluxe-rooms",
     description:
-      "Thoughtfully designed for comfort and calm, our Deluxe Rooms offer a refined stay experience with elegant interiors, warm textures, and a soothing ambience that feels both luxurious and inviting.",
+      "A refined space designed for comfort, simplicity, and effortless relaxation. With elegant interiors and a calm setting, it offers a perfect personal retreat.",
     features: ["Elegant interiors", "Comfort-focused stay", "Warm premium ambience"],
   },
   {
@@ -22,7 +22,7 @@ const roomData = [
     image: familyImg,
     route: "/stays/family-rooms",
     description:
-      "Created for togetherness, our Family Rooms provide generous space, comfort, and convenience for memorable stays with loved ones, blending warmth, practicality, and effortless elegance.",
+      "A comfortable family room with separate spaces for rest, fun, and time together. Oversized velvet sofas, city views, and a cozy setting for games and snacks make it ideal for shared moments.",
     features: ["Spacious layout", "Ideal for families", "Comfort and convenience"],
   },
   {
@@ -30,7 +30,7 @@ const roomData = [
     image: suiteImg,
     route: "/stays/suite-rooms",
     description:
-      "Our Suite Rooms bring together style, space, and sophistication, offering an elevated hospitality experience with beautifully curated interiors for guests who appreciate refined comfort.",
+      "A peaceful suite with elegant interiors and a comfortable lounge.Complete with plush seating and a jacuzzi for a relaxing, spa-like experience.",
     features: ["Luxury experience", "Spacious and stylish", "Curated interiors"],
   },
   {
@@ -38,7 +38,7 @@ const roomData = [
     image: presidentialImg,
     route: "/stays/presidential-suite",
     description:
-      "The Presidential Suite is the finest expression of URRTH hospitality — an exclusive, grand, and beautifully crafted space for those seeking a stay marked by prestige, indulgence, and timeless elegance.",
+      "A signature Presidential Suite offering spacious living, refined interiors, and seamless modern comfort.With dedicated areas for dining, work, plush seating, and a private jacuzzi, it defines true luxury.",
     features: ["Exclusive luxury", "Grand signature stay", "Timeless elegance"],
   },
 ];

@@ -18,9 +18,8 @@ export default function PresidentialSuiteRooms() {
           <div className="roomDetailHeroInner reveal">
             <h1>Presidential Suite</h1>
             <p>
-              The Presidential Suite is the finest expression of URRTH hospitality — 
-              an exclusive, grand, and beautifully crafted space for those seeking 
-              a stay marked by prestige, indulgence, and timeless elegance.
+              A signature Presidential Suite offering spacious living, refined interiors, and seamless modern comfort.
+With dedicated areas for dining, work, plush seating, and a private jacuzzi, it defines true luxury.
             </p>
           </div>
         </div>
@@ -28,11 +27,11 @@ export default function PresidentialSuiteRooms() {
       <PresidentialSuiteGallery/>
 
 
-      <RoomHighlights/>
+      <RoomHighlights roomType="presidential"/>
 
       <RoomsNavigator current={"presidential"}/>
 
-      <RoomFAQs />
+      <RoomFAQs roomType="presidential" />
   
 
       <Footer />
