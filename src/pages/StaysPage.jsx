@@ -110,7 +110,7 @@ export default function StaysPage() {
                   <Link to={room.route} className="btn primary">
                     Explore
                   </Link>
-                  <Link to="/" className="btn outline">
+                  <Link to="/enquiry" className="btn outline">
                     Enquire
                   </Link>
                 </div>

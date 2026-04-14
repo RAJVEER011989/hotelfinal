@@ -111,7 +111,7 @@ export default function ExperiencesPage() {
                   <Link to={item.route} className="btn primary">
                     Explore Venue
                   </Link>
-                  <Link to="/" className="btn outline">
+                  <Link to="/enquiry" className="btn outline">
                     Enquire
                   </Link>
                 </div>

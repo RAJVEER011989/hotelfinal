@@ -186,7 +186,7 @@ const payload = {
 
     const text = encodeURIComponent(buildWhatsappText());
     console.log(text);
-    const phoneNumber = "919479282528";
+    const phoneNumber = "917222902226";
     window.open(`https://wa.me/${phoneNumber}?text=${text}`, "_blank", "noreferrer");
   };
 
