@@ -4028,12 +4028,12 @@ html {
   /* HERO */
   .hero {
     min-height: 82svh;
-    height: 82svh;
+    height: 100svh;
   }
 
   .slides,
   .slide {
-    height: 82svh;
+    height: 100svh;
   }
 
   .slide {
@@ -4074,6 +4074,7 @@ html {
 
   /* HERO CENTER */
   .heroCenter {
+    min-height: 100svh;
     padding: 0 14px;
   }
 
