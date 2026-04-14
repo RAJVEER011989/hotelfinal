@@ -4500,7 +4500,7 @@ html {
   }
 }@media (max-width: 768px) {
   /* ===== HERO ===== */
-  .hero {
+  /* .hero {
     min-height: 82svh;
     height: 82svh;
   }
@@ -4508,7 +4508,40 @@ html {
   .slides,
   .slide {
     height: 82svh;
+  } */
+
+  @media (max-width: 768px) {
+  html,
+  body,
+  #root {
+    margin: 0 !important;
+    padding: 0 !important;
   }
+
+  .hero {
+    height: 100vh !important;
+    min-height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 100dvh !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  .slides,
+  .slide,
+  .heroCenter {
+    height: 100vh !important;
+    min-height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 100dvh !important;
+  }
+
+  .slide {
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+
 
   .topRow {
     width: calc(100% - 24px);
