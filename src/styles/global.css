@@ -4451,7 +4451,7 @@ html {
 }
 
 @media (max-width: 480px) {
-  .hero {
+  /* .hero {
     min-height: 80svh;
     height: 80svh;
   }
@@ -4459,7 +4459,7 @@ html {
   .slides,
   .slide {
     height: 80svh;
-  }
+  } */
 
   .heroTitleWrap {
     transform: translateY(3vh);
