@@ -5151,4 +5151,75 @@ img {
   inset: 0;
   background: transparent;
   z-index: 2;
+}/* ===== Signature Stays Moving Slider ===== */
+.staysSlider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 32px;
+}
+
+.staysTrack {
+  display: flex;
+  gap: 18px;
+  width: max-content;
+  animation: staysScrollLeftToRight 32s linear infinite;
+  will-change: transform;
+}
+
+/* pause on hover */
+.staysSlider:hover .staysTrack {
+  animation-play-state: paused;
+}
+
+/* important: override old grid only inside slider */
+.staysSlider .stayCard {
+  flex: 0 0 320px;
+  min-width: 320px;
+}
+
+@keyframes staysScrollLeftToRight {
+  from {
+    transform: translateX(calc(-50% - 9px));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* ===== MOBILE ONLY: Signature Stays Slider ===== */
+@media (max-width: 768px) {
+
+  .staysGrid {
+    display: flex !important;
+    gap: 14px;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  .staysGrid > * {
+    flex: 0 0 78vw;   /* card width */
+    min-width: 78vw;
+  }
+
+  .staysGrid {
+    animation: staysScrollMobile 22s linear infinite;
+    will-change: transform;
+  }
+
+  /* smooth left → right movement */
+  @keyframes staysScrollMobile {
+    from {
+      transform: translateX(calc(-50%));
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  /* pause on touch (premium feel) */
+  .staysGrid:active {
+    animation-play-state: paused;
+  }
 }

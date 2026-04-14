@@ -1,7 +1,23 @@
 import { STAYS } from "../data/content.js";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+
 
 export default function Stays() {
+  
+
+const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+useEffect(() => {
+  const handleResize = () => {
+    setIsMobile(window.innerWidth <= 768);
+  };
+
+  window.addEventListener("resize", handleResize);
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
+
+const staysData = isMobile ? [...STAYS, ...STAYS] : STAYS;
   return (
     <section className="section compact" id="stays">
       <div className="container">
@@ -11,10 +27,16 @@ export default function Stays() {
         </div>
 
         <div className="staysGrid reveal">
-          {STAYS.map((s) => (
-            <StayCard key={s.title} title={s.title} desc={s.desc} img={s.image} route={s.route} />
-          ))}
-        </div>
+  {staysData.map((s, index) => (
+    <StayCard
+      key={index}
+      title={s.title}
+      desc={s.desc}
+      img={s.image}
+      route={s.route}
+    />
+  ))}
+</div>
       </div>
     </section>
   );
