@@ -4137,13 +4137,13 @@ html {
   }
 
   /* STAYS HOME */
-  .staysGrid {
+  /* .staysGrid {
     display: flex;
     gap: 14px;
     overflow-x: auto;
     padding-bottom: 8px;
     scroll-snap-type: x mandatory;
-  }
+  } */
 
   .stayCard {
     flex: 0 0 64vw;
