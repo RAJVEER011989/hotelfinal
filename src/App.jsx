@@ -28,6 +28,21 @@ import PartyLawnAndConferencePage from "./components/experiences/PartyLawnAndCon
 import EnquiryPage from "./pages/EnquiryPage.jsx";
 
 export default function App() {
+  useEffect(() => {
+    const blockContextMenu = (e) => e.preventDefault();
+    const blockDragStart = (e) => e.preventDefault();
+    const blockSelectStart = (e) => e.preventDefault();
+
+    document.addEventListener("contextmenu", blockContextMenu);
+    document.addEventListener("dragstart", blockDragStart);
+    document.addEventListener("selectstart", blockSelectStart);
+
+    return () => {
+      document.removeEventListener("contextmenu", blockContextMenu);
+      document.removeEventListener("dragstart", blockDragStart);
+      document.removeEventListener("selectstart", blockSelectStart);
+    };
+  }, []);
   const location = useLocation();
 
   useEffect(() => {

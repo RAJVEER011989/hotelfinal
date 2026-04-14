@@ -162,13 +162,16 @@ const goHomeAndTop = () => {
           </div>
         </div>
 
-        <div className="footerCenterLogo">
+        <div className="footerCenterLogo" onClick={goHomeAndTop}>
+          <Link to="/">
   <img
     src={footerLogo}
     alt="URRTH"
-    onClick={goHomeAndTop}
+    
     style={{ cursor: "pointer" }}
+    
   />
+ </Link>
 </div>
 
         <div className="footerBottomLuxury">

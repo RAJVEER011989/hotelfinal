@@ -5116,3 +5116,39 @@ html {
     padding-top: 4px !important;
   }
 }
+/* ===== BASIC CONTENT PROTECTION ===== */
+html,
+body {
+  -webkit-touch-callout: none;   /* iPhone long-press menu */
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  -webkit-touch-callout: none;
+  pointer-events: none;
+}
+
+/* for clickable logo wrappers or image links */
+.protected-img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  -webkit-touch-callout: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+.protected-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.protected-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  z-index: 2;
+}
