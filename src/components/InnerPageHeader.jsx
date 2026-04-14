@@ -13,8 +13,10 @@ export default function InnerPageHeader({ dark = false }) {
 
     {/* centered logo */}
     <div className="innerHeaderLogo">
-      <img src={logo} alt="URRTH" />
-    </div>
+  <Link to="/">
+    <img src={logo} alt="URRTH" />
+  </Link>
+</div>
 
     {/* right menu */}
     <div className="innerHeaderMenu">

@@ -3,7 +3,7 @@ import footerLogo from "../assets/logo/TM (2).png";
 import footerTagline from "../assets/logo/tag (2).png";
 import footerTaglineMobile from "../assets/logo/tag (4).png";
 import { ChevronDown } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link,  useNavigate } from "react-router-dom";
 
 export default function Footer() {
   const handleFooterNavigate = () => {
@@ -11,6 +11,16 @@ export default function Footer() {
     window.scrollTo(0, 0);
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
+  }, 50);
+};
+const navigate = useNavigate();
+
+const goHomeAndTop = () => {
+  navigate("/"); // go to home
+
+  // ensure scroll to top (important for mobile)
+  setTimeout(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, 50);
 };
   const [openSection, setOpenSection] = useState(null);
@@ -144,8 +154,13 @@ export default function Footer() {
         </div>
 
         <div className="footerCenterLogo">
-          <img src={footerLogo} alt="URRTH" />
-        </div>
+  <img
+    src={footerLogo}
+    alt="URRTH"
+    onClick={goHomeAndTop}
+    style={{ cursor: "pointer" }}
+  />
+</div>
 
         <div className="footerBottomLuxury">
           <div>© 2026 URRTH. All rights reserved.</div>
