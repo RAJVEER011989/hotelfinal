@@ -3,7 +3,8 @@ import footerLogo from "../assets/logo/TM (2).png";
 import footerTagline from "../assets/logo/tag (2).png";
 import footerTaglineMobile from "../assets/logo/tag (4).png";
 import { ChevronDown } from "lucide-react";
-import { Link,  useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 export default function Footer() {
   const handleFooterNavigate = () => {
@@ -14,14 +15,22 @@ export default function Footer() {
   }, 50);
 };
 const navigate = useNavigate();
+const location = useLocation();
 
 const goHomeAndTop = () => {
-  navigate("/"); // go to home
+  if (location.pathname !== "/") {
+    navigate("/");
+  }
 
-  // ensure scroll to top (important for mobile)
-  setTimeout(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, 50);
+  const scrollTopNow = () => {
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  };
+
+  scrollTopNow();
+  setTimeout(scrollTopNow, 80);
+  setTimeout(scrollTopNow, 180);
 };
   const [openSection, setOpenSection] = useState(null);
 
