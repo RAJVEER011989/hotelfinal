@@ -155,7 +155,7 @@ const goHomeAndTop = () => {
               <ChevronDown size={20} />
             </button>
             <div className={`footerAccBody ${openSection === "contact" ? "open" : ""}`}>
-              <a href="tel:+919479282528">+91 9479282528</a>
+              <a href="tel:+917222902226">+91 7222902226</a>
               <a href="mailto:info@urrthhotels.com">info@urrthhotels.com</a>
               <Link to="/enquiry">Send Enquiry</Link>
             </div>
