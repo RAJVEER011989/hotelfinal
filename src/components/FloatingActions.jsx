@@ -13,7 +13,7 @@ export default function FloatingActions() {
 
       <a
         className="wa"
-        href="https://wa.me/919479282528"
+        href="https://wa.me/917222902226"
         target="_blank"
         rel="noreferrer"
         aria-label="WhatsApp"
